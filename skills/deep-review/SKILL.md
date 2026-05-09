@@ -10,14 +10,16 @@ Use this skill to review papers and other technical artifacts with the depth of 
 ## Start Here
 
 1. Identify the artifact source: local PDF, arXiv URL, markdown/text draft, repository artifact, or pasted content.
-2. If the artifact is a local PDF or arXiv URL and text extraction is needed, prefer the scripts in `scripts/`.
-3. Before doing substantive review, read `references/orchestrator_protocol.md`.
-4. Ask a short calibration interview before reviewing. Use `references/calibration_questions.md` to select questions.
-5. Choose the review depth:
+2. Check for local review memory in `.deep-review/`. If present, read it before the calibration interview and summarize any preferences you plan to apply.
+3. If the artifact is a local PDF or arXiv URL and text extraction is needed, prefer the scripts in `scripts/`.
+4. Before doing substantive review, read `references/orchestrator_protocol.md`.
+5. Ask a short calibration interview before reviewing. Use `references/calibration_questions.md` to select questions.
+6. Choose the review depth:
    - `quick`: at least 2 specialist passes, 1 self-critique round.
    - `standard`: at least 4 specialist passes, 1 self-critique round.
    - `deep`: at least 8 specialist passes, 2 self-critique rounds.
-6. Produce the final report using `references/output_format.md` and the taxonomy in `references/review_rubric.md`.
+7. Produce the final report using `references/output_format.md` and the taxonomy in `references/review_rubric.md`.
+8. At the end, ask whether to save or update review memory. Only write to `.deep-review/` after explicit user approval.
 
 Script examples:
 
@@ -36,6 +38,7 @@ If a helper script fails because of network, dependency, or parsing issues, fall
 - Challenge every finding before finalizing it. Drop weak issues and escalate findings that survive scrutiny.
 - Cite exact locations: section, page, equation, theorem, table, figure, quoted passage, file, or line.
 - Separate fatal flaws from weaker concerns and minor issues.
+- Treat review memory as user-owned context. Use it to reduce repeated calibration, but never let it override explicit instructions in the current task.
 
 ## Tool Guidance
 
@@ -44,6 +47,7 @@ If a helper script fails because of network, dependency, or parsing issues, fall
 - If subagents are available, give each one a distinct, non-overlapping review goal.
 - If web tools are available, use them for literature, citation, and factual verification.
 - If code execution is available, use it for arithmetic, parameter checks, simulations, derivations, parsing, and reproducible sanity checks.
+- If file writing is available and the user approves, maintain review memory using `references/review_memory.md`.
 
 ## Bundled Resources
 
@@ -51,6 +55,7 @@ If a helper script fails because of network, dependency, or parsing issues, fall
 - `references/calibration_questions.md`: interview question bank.
 - `references/review_rubric.md`: issue severity taxonomy.
 - `references/output_format.md`: final report format.
+- `references/review_memory.md`: local memory workflow and file format.
 - `references/distribution.md`: distribution notes for Claude and Codex.
 - `scripts/extract_pdf_text.py`: extract text and title from a local PDF.
 - `scripts/fetch_arxiv_pdf.py`: normalize an arXiv URL and download the PDF.

@@ -4,12 +4,14 @@ Find errors in the artifact provided by the user: obvious errors and subtle ones
 
 ## Process
 
-1. Read the artifact carefully. Identify the core thesis, methodology, and claims.
-2. Interview the user before reviewing. Your job is to understand three things: who this person is, what conversation this artifact is entering, and where the author thinks it might break. Get their taste: what they value in good work, what criticism they find useful, what existing work this responds to, what a skeptical reader would push back on, and what they do not want you to waste time on. Follow up on vague replies.
-3. Decompose the review into research tasks. Run specialist passes for domain-specific investigation, such as the paper's mathematical framework, current literature, methods, empirical design, implementation, or logical structure. Cast a wide net. Each specialist pass should have a distinct, non-overlapping research goal.
-4. Synthesize specialist findings into a draft review.
-5. Challenge your own findings. For each issue you flagged, argue the other side: is there a valid interpretation where the author is correct? Are you missing context? Could the specialist pass have been wrong? Drop issues that do not survive scrutiny. Escalate issues that hold up under pressure.
-6. Produce the final review.
+1. Read any local review memory in `.deep-review/` if it exists. Use it to understand the user's standing preferences, recurring concerns, target standards, and prior review patterns. Current task instructions override memory.
+2. Read the artifact carefully. Identify the core thesis, methodology, and claims.
+3. Interview the user before reviewing. Your job is to understand three things: who this person is, what conversation this artifact is entering, and where the author thinks it might break. Get their taste: what they value in good work, what criticism they find useful, what existing work this responds to, what a skeptical reader would push back on, and what they do not want you to waste time on. Follow up on vague replies.
+4. Decompose the review into research tasks. Run specialist passes for domain-specific investigation, such as the paper's mathematical framework, current literature, methods, empirical design, implementation, or logical structure. Cast a wide net. Each specialist pass should have a distinct, non-overlapping research goal.
+5. Synthesize specialist findings into a draft review.
+6. Challenge your own findings. For each issue you flagged, argue the other side: is there a valid interpretation where the author is correct? Are you missing context? Could the specialist pass have been wrong? Drop issues that do not survive scrutiny. Escalate issues that hold up under pressure.
+7. Produce the final review.
+8. Ask the user whether to save or update review memory. If they approve, write a concise update following `references/review_memory.md`.
 
 ## Depth Defaults
 

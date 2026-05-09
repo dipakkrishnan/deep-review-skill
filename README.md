@@ -6,6 +6,8 @@ It asks a short calibration interview, reads the artifact carefully, decomposes 
 
 The goal is simple: find the errors a generic chat-with-file pass is likely to miss.
 
+Deep Review can also maintain optional local review memory in `.deep-review/`, so future reviews can pick up the user's preferred standards, recurring concerns, and review taste. It only writes memory after explicit user approval.
+
 ## What It Is Good For
 
 - pre-submission paper review
@@ -89,6 +91,13 @@ Then it produces a markdown review with:
 - significant concerns
 - minor issues
 - questions for the authors
+
+Optionally, Deep Review can save local memory for future runs:
+
+- standing review preferences
+- target venues or standards
+- recurring issue patterns
+- lightweight history of reviewed artifacts
 
 ## Requirements
 
