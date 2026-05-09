@@ -100,6 +100,10 @@ The helper scripts require Python. PDF extraction uses PyMuPDF:
 pip install pymupdf
 ```
 
+## Privacy
+
+Deep Review does not collect telemetry or send data to any third-party service controlled by this plugin. See [PRIVACY.md](PRIVACY.md).
+
 ## Notes
 
 Deep Review is not a replacement for expert human judgment. It is a way to make review cheaper, sharper, and more adversarial before you ask humans to spend scarce attention on the artifact.
