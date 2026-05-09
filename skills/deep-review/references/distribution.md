@@ -1,16 +1,22 @@
 # Distribution
 
-This skill is packaged as a Claude-compatible project skill with Codex-style metadata.
+This skill is packaged as a Claude Code plugin with Codex-style skill metadata.
 
 ## Claude Code
 
-Claude Code discovers project skills from `.claude/skills/`. Users who clone or pull this repository can use the skill from the project directory.
+Claude Code can load this repository as a plugin. For local testing, run:
+
+```bash
+claude --plugin-dir /path/to/deep-review-skill
+```
+
+The skill is also usable as a project skill by copying `skills/deep-review` into a project's `.claude/skills/deep-review` directory.
 
 Reference: https://docs.claude.com/en/docs/claude-code/skills
 
 ## Claude.ai
 
-Zip the `deep-review` skill folder and upload it through Claude's Customize > Skills flow. Custom uploads are private to the uploading user's account by default.
+Zip the `skills/deep-review` skill folder and upload it through Claude's Customize > Skills flow. Custom uploads are private to the uploading user's account by default.
 
 Reference: https://support.claude.com/en/articles/12512180-using-skills-in-claude
 
@@ -28,7 +34,7 @@ Typical Codex skill-installer shape:
 
 ```bash
 # Run through Codex's skill installer tooling, not as a generic shell command:
-install-skill-from-github.py --repo OWNER/REPO --path .claude/skills/deep-review
+install-skill-from-github.py --repo OWNER/REPO --path skills/deep-review
 ```
 
 After installing a skill into Codex, restart Codex so it can discover the new skill.

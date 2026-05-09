@@ -29,7 +29,13 @@ Clone this repo, then copy or symlink the skill folder into your project:
 
 ```bash
 mkdir -p .claude/skills
-cp -R /path/to/deep-review-skill/deep-review .claude/skills/deep-review
+cp -R /path/to/deep-review-skill/skills/deep-review .claude/skills/deep-review
+```
+
+For plugin-style local testing in Claude Code, load this repo directly:
+
+```bash
+claude --plugin-dir /path/to/deep-review-skill
 ```
 
 Then ask Claude Code:
@@ -40,7 +46,7 @@ Use $deep-review to review this paper for theorem correctness and literature pos
 
 ### Claude.ai
 
-Zip the `deep-review/` folder and upload it as a custom Skill in Claude settings.
+Zip the `skills/deep-review/` folder and upload it as a custom Skill in Claude settings.
 
 ### Codex
 
@@ -48,7 +54,7 @@ Install from this repo path using Codex skill-install tooling:
 
 ```text
 repo: dipakkrishnan/deep-review-skill
-path: deep-review
+path: skills/deep-review
 ```
 
 Restart Codex after installing.
