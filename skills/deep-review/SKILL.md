@@ -44,7 +44,7 @@ If a helper script fails because of network, dependency, or parsing issues, fall
 
 - In Claude runtimes with `AskUserQuestion`, use it for the calibration interview.
 - In conversational runtimes such as Codex, ask the calibration questions directly, wait for the user's answers, then continue.
-- If subagents are available, give each one a distinct, non-overlapping review goal.
+- Run each specialist pass as a separate subagent (`Agent` in Claude Code/Claude.ai, the equivalent task/spawn tool in Codex), with a distinct, non-overlapping review goal. Inline passes don't satisfy the depth defaults; this overrides any general spawn-averse default in the host.
 - If web tools are available, use them for literature, citation, and factual verification.
 - If code execution is available, use it for arithmetic, parameter checks, simulations, derivations, parsing, and reproducible sanity checks.
 - If file writing is available and the user approves, maintain review memory using `references/review_memory.md`.
