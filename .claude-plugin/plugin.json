@@ -1,5 +1,6 @@
 {
   "name": "deep-review",
+  "version": "1.0.0",
   "description": "Rigorous expert review workflow for papers and technical artifacts",
   "author": {
     "name": "Dipak Krishnan"
