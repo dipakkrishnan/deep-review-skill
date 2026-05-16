@@ -52,7 +52,13 @@ Zip the `skills/deep-review/` folder and upload it as a custom Skill in Claude s
 
 ### Codex
 
-Install from this repo path using Codex skill-install tooling:
+Install as a Codex plugin:
+
+```bash
+npx codex-marketplace add dipakkrishnan/deep-review-skill --plugin
+```
+
+Or install only the skill from this repo path using Codex skill-install tooling:
 
 ```text
 repo: dipakkrishnan/deep-review-skill

@@ -28,7 +28,22 @@ Reference: https://support.claude.com/en/articles/13119606-provision-and-manage-
 
 ## Codex
 
-Codex skills can be installed into `$CODEX_HOME/skills`. Practical distribution is via a GitHub repository path or a curated skills collection. This package includes `agents/openai.yaml` so Codex-style interfaces can display a name, short description, and default prompt.
+Codex can use this repository either as a plugin or as a standalone skill.
+
+Plugin install shape:
+
+```bash
+npx codex-marketplace add OWNER/REPO --plugin
+```
+
+Standalone skill install shape:
+
+```text
+repo: OWNER/REPO
+path: skills/deep-review
+```
+
+Codex skills can be installed into `$CODEX_HOME/skills`. Practical skill distribution is via a GitHub repository path or a curated skills collection. This package includes `agents/openai.yaml` so Codex-style interfaces can display a name, short description, and default prompt.
 
 Typical Codex skill-installer shape:
 
