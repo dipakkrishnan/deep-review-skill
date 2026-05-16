@@ -58,6 +58,16 @@ Install as a Codex plugin:
 npx codex-marketplace add dipakkrishnan/deep-review-skill --plugin
 ```
 
+Or add this repository as a Codex marketplace:
+
+```text
+Source: dipakkrishnan/deep-review-skill
+Git ref: main
+Sparse paths:
+.agents/plugins
+plugins/deep-review
+```
+
 Or install only the skill from this repo path using Codex skill-install tooling:
 
 ```text
