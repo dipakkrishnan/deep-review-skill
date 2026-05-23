@@ -1,6 +1,0 @@
-interface:
-  display_name: "Deep Review"
-  short_description: "Expert review workflow for papers/artifacts"
-  default_prompt: "Use $deep-review to run a rigorous expert review of this paper or technical artifact."
-policy:
-  allow_implicit_invocation: true
