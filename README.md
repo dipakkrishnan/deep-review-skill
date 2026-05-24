@@ -37,17 +37,11 @@ Add the direct Deep Review marketplace:
 
 This is the fastest install path while the approved community marketplace listing propagates.
 
-Clone this repo, then copy or symlink the skill folder into your project:
+Or copy the skill folder into a project directly:
 
 ```bash
 mkdir -p .claude/skills
 cp -R /path/to/deep-review-skill/skills/deep-review .claude/skills/deep-review
-```
-
-For plugin-style local testing in Claude Code, load this repo directly:
-
-```bash
-claude --plugin-dir /path/to/deep-review-skill
 ```
 
 Then ask Claude Code:
@@ -58,24 +52,22 @@ Use $deep-review to review this paper for theorem correctness and literature pos
 
 ### Claude.ai
 
-Zip the `skills/deep-review/` folder and upload it as a custom Skill in Claude settings.
+Download `deep-review.zip` from the latest [GitHub Release](https://github.com/dipakkrishnan/deep-review-skill/releases), then in Claude.ai go to **Customize → Skills → + → Upload a skill** and drop the zip in.
+
+To build the zip yourself from a checkout:
+
+```bash
+scripts/package-skill.sh
+# produces dist/deep-review.zip
+```
 
 ### Codex
 
-Install as a Codex plugin:
+Codex does not yet expose a marketplace-style installer for third-party plugins. Copy the skill into a Codex skills directory and restart Codex:
 
 ```bash
-npx codex-marketplace add dipakkrishnan/deep-review-skill --plugin
+cp -R skills/deep-review "$CODEX_HOME/skills/deep-review"
 ```
-
-Or install only the skill from this repo path using Codex skill-install tooling:
-
-```text
-repo: dipakkrishnan/deep-review-skill
-path: skills/deep-review
-```
-
-Restart Codex after installing.
 
 ## Example Prompts
 
