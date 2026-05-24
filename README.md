@@ -52,7 +52,7 @@ Use $deep-review to review this paper for theorem correctness and literature pos
 
 ### Claude.ai
 
-Download `deep-review.zip` from the latest [GitHub Release](https://github.com/dipakkrishnan/deep-review-skill/releases), then in Claude.ai go to **Customize → Skills → + → Upload a skill** and drop the zip in.
+Download [`deep-review.zip`](https://github.com/dipakkrishnan/deep-review-skill/releases/latest/download/deep-review.zip) (always points at the latest release), then in Claude.ai go to **Customize → Skills → + → Upload a skill** and drop the zip in.
 
 To build the zip yourself from a checkout:
 

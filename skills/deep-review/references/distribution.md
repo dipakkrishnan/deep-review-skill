@@ -38,7 +38,7 @@ References:
 
 Claude.ai has no marketplace mechanism for plugins, so distribution is via the zip-upload Skills flow. The lowest-friction path for users:
 
-1. Download `deep-review.zip` from the repository's GitHub Releases page.
+1. Download `deep-review.zip` from `https://github.com/dipakkrishnan/deep-review-skill/releases/latest/download/deep-review.zip` (this URL always serves the latest release).
 2. In Claude.ai, go to **Customize → Skills → + → Upload a skill** and drop the zip in.
 
 Custom uploads are private to the uploading user's account by default.
