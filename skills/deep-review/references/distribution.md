@@ -4,7 +4,17 @@ This skill is packaged as a Claude Code plugin with Codex-style skill metadata.
 
 ## Claude Code
 
-Claude Code can load this repository as a plugin. For local testing, run:
+Claude Code can install Deep Review from the direct marketplace in this repository:
+
+```text
+/plugin marketplace add dipakkrishnan/deep-review-skill
+/plugin install deep-review@deep-review-marketplace
+/reload-plugins
+```
+
+This direct marketplace is useful while the approved community marketplace listing is still propagating. After it appears in the community marketplace, users can also install it from `claude-community`.
+
+For local testing, run:
 
 ```bash
 claude --plugin-dir /path/to/deep-review-skill
@@ -12,7 +22,11 @@ claude --plugin-dir /path/to/deep-review-skill
 
 The skill is also usable as a project skill by copying `skills/deep-review` into a project's `.claude/skills/deep-review` directory.
 
-Reference: https://docs.claude.com/en/docs/claude-code/skills
+References:
+
+- https://code.claude.com/docs/en/plugin-marketplaces
+- https://code.claude.com/docs/en/discover-plugins
+- https://docs.claude.com/en/docs/claude-code/skills
 
 ## Claude.ai
 

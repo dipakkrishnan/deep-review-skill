@@ -27,6 +27,16 @@ If you want to try it on a real paper or artifact, open an issue or reach out.
 
 ### Claude Code
 
+Add the direct Deep Review marketplace:
+
+```text
+/plugin marketplace add dipakkrishnan/deep-review-skill
+/plugin install deep-review@deep-review-marketplace
+/reload-plugins
+```
+
+This is the fastest install path while the approved community marketplace listing propagates.
+
 Clone this repo, then copy or symlink the skill folder into your project:
 
 ```bash

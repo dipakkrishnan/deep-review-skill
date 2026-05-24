@@ -1,0 +1,23 @@
+{
+  "name": "deep-review-marketplace",
+  "description": "Direct distribution channel for the Deep Review Claude Code plugin.",
+  "owner": {
+    "name": "Dipak Krishnan",
+    "url": "https://github.com/dipakkrishnan"
+  },
+  "plugins": [
+    {
+      "name": "deep-review",
+      "source": "./",
+      "description": "Rigorous expert review workflow for papers and technical artifacts.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Dipak Krishnan",
+        "url": "https://github.com/dipakkrishnan"
+      },
+      "homepage": "https://github.com/dipakkrishnan/deep-review-skill",
+      "repository": "https://github.com/dipakkrishnan/deep-review-skill",
+      "license": "Apache-2.0"
+    }
+  ]
+}
