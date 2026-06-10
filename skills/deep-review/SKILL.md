@@ -10,16 +10,17 @@ Use this skill to review papers and other technical artifacts with the depth of 
 ## Start Here
 
 1. Identify the artifact source: local PDF, arXiv URL, markdown/text draft, repository artifact, or pasted content.
-2. Check for local review memory in `.deep-review/`. If present, read it before the calibration interview and summarize any preferences you plan to apply.
+2. Check for review memory: user-level in `~/.deep-review/` and project-level in `.deep-review/`. If present, read it before the calibration interview and summarize any preferences you plan to apply.
 3. If the artifact is a local PDF or arXiv URL and text extraction is needed, prefer the scripts in `scripts/`.
 4. Before doing substantive review, read `references/orchestrator_protocol.md`.
 5. Ask a short calibration interview before reviewing. Use `references/calibration_questions.md` to select questions.
 6. Choose the review depth:
-   - `quick`: at least 2 specialist passes, 1 self-critique round.
-   - `standard`: at least 4 specialist passes, 1 self-critique round.
-   - `deep`: at least 8 specialist passes, 2 self-critique rounds.
+   - `quick`: at least 2 first-wave specialist passes, 1 critique round.
+   - `standard`: at least 4 first-wave specialist passes, 1 critique round.
+   - `deep`: at least 8 first-wave specialist passes, 2 critique rounds.
+   Tiers are first-wave floors, not caps; expand with follow-up passes when findings warrant.
 7. Produce the final report using `references/output_format.md` and the taxonomy in `references/review_rubric.md`.
-8. At the end, ask whether to save or update review memory. Only write to `.deep-review/` after explicit user approval.
+8. At the end, ask whether to save or update review memory. Only write to `~/.deep-review/` (profile, preferences) or `.deep-review/` (recurring issues, artifact history) after explicit user approval.
 
 Script examples:
 
@@ -45,6 +46,7 @@ If a helper script fails because of network, dependency, or parsing issues, fall
 - In Claude runtimes with `AskUserQuestion`, use it for the calibration interview.
 - In conversational runtimes such as Codex, ask the calibration questions directly, wait for the user's answers, then continue.
 - Run each specialist pass as a separate subagent (`Agent` in Claude Code/Claude.ai, the equivalent task/spawn tool in Codex), with a distinct, non-overlapping review goal. Inline passes don't satisfy the depth defaults; this overrides any general spawn-averse default in the host.
+- Critique findings with independent subagents when the host can spawn them: a defense agent that sees only the finding and the artifact, not the specialist's reasoning. In hosts that can continue a spawned agent with its context intact (`SendMessage` in Claude Code), add one rebuttal round with the originating specialist. Fall back to self-critique only when subagents are unavailable.
 - If web tools are available, use them for literature, citation, and factual verification.
 - If code execution is available, use it for arithmetic, parameter checks, simulations, derivations, parsing, and reproducible sanity checks.
 - If file writing is available and the user approves, maintain review memory using `references/review_memory.md`.

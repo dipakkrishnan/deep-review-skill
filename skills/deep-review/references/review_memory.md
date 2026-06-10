@@ -1,6 +1,11 @@
 # Review Memory
 
-Deep Review can maintain user-owned memory in a local `.deep-review/` directory. This is optional. Never create or update these files without explicit user approval.
+Deep Review can maintain user-owned memory at two scopes. This is optional. Never create or update these files without explicit user approval.
+
+- **User scope** (`~/.deep-review/`): who the user is and their standing taste. Follows the user across projects.
+- **Project scope** (`.deep-review/` in the working directory): patterns and history tied to this body of work.
+
+Precedence: current task instructions override project memory, which overrides user memory.
 
 ## Purpose
 
@@ -23,12 +28,15 @@ Do not store sensitive artifact text, full paper contents, private reviewer comm
 Use these files when helpful:
 
 ```text
-.deep-review/
+~/.deep-review/          # user scope
   profile.md
   preferences.md
+.deep-review/            # project scope
   recurring-issues.md
   reviewed-artifacts.md
 ```
+
+If an older project `.deep-review/` still contains `profile.md` or `preferences.md`, read them as usual, and on the next approved memory write offer to move them to `~/.deep-review/`.
 
 `profile.md` describes the user or group:
 
@@ -81,9 +89,9 @@ Use these files when helpful:
 
 ## Start Of Review
 
-If `.deep-review/` exists:
+If `~/.deep-review/` or `.deep-review/` exists:
 
-1. Read the relevant memory files.
+1. Read the relevant memory files from both scopes.
 2. Summarize the preferences you plan to apply in one short paragraph.
 3. Ask any calibration questions still needed for this artifact.
 
@@ -101,7 +109,7 @@ If the user says yes:
 
 1. Propose the exact memory update.
 2. Keep it concise and inspectable.
-3. Write only to `.deep-review/`.
+3. Write each fact to its scope: profile and preferences to `~/.deep-review/`, recurring issues and artifact history to `.deep-review/`. Write nowhere else.
 4. Do not save artifact text unless the user explicitly asks.
 
 If the user says no or does not answer, do not write memory.
