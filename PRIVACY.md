@@ -4,15 +4,26 @@ Deep Review is a Claude Code plugin and skill for reviewing papers and technical
 
 ## Data Collection
 
-Deep Review does not collect, store, transmit, sell, or share user data.
+Deep Review does not collect, transmit, sell, or share user data.
 
 The plugin does not include telemetry, analytics, tracking pixels, external logging, or background network services.
+
+## Review Memory
+
+Deep Review can optionally write review memory to local markdown files:
+
+- `~/.deep-review/` for user-level profile and review preferences
+- `.deep-review/` in the working directory for project-level recurring issues and reviewed-artifact history
+
+Review memory is disabled by default. Deep Review only creates or updates these files after explicit user approval, and it proposes the exact update before writing it.
+
+Review memory should not contain full artifact text, private reviewer comments, credentials, API keys, or personal data that is not needed to guide future reviews. Users can inspect, edit, or delete the files at any time using normal filesystem tools.
 
 ## User Artifacts
 
 Users may provide papers, PDFs, arXiv links, markdown drafts, code, or other technical artifacts to Claude while using this plugin.
 
-Those artifacts are handled by the Claude or Codex environment in which the user runs the skill. Deep Review itself does not receive or store a copy of those artifacts outside the user's local/runtime environment.
+Those artifacts are handled by the Claude or Codex environment in which the user runs the skill. Deep Review itself does not receive or store a copy of those artifacts outside the user's local/runtime environment. Review memory stores only the concise, user-approved context described above.
 
 ## Helper Scripts
 

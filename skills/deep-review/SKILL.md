@@ -17,7 +17,7 @@ Use this skill to review papers and other technical artifacts with the depth of 
 6. Choose the review depth:
    - `quick`: at least 2 first-wave specialist passes, 1 critique round.
    - `standard`: at least 4 first-wave specialist passes, 1 critique round.
-   - `deep`: at least 8 first-wave specialist passes, 2 critique rounds.
+   - `deep`: at least 8 first-wave specialist passes, then a defense/rebuttal round and an independent adjudication round.
    Tiers are first-wave floors, not caps; expand with follow-up passes when findings warrant.
 7. Produce the final report using `references/output_format.md` and the taxonomy in `references/review_rubric.md`.
 8. At the end, ask whether to save or update review memory. Only write to `~/.deep-review/` (profile, preferences) or `.deep-review/` (recurring issues, artifact history) after explicit user approval.

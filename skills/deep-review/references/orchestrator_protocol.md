@@ -14,6 +14,7 @@ Find errors in the artifact provided by the user: obvious errors and subtle ones
    - If the host can continue a previously spawned agent with its context intact (e.g., `SendMessage` in Claude Code), cross-examine: spawn an independent defense agent for the finding, then relay its defense to the originating specialist for one rebuttal round before judging.
    - Otherwise, if the host can spawn subagents (Claude Code, Claude.ai, Codex), spawn an independent defense agent per finding or small batch. Give it only the finding and the artifact location — not the specialist's reasoning — and instruct it to construct the strongest reading under which the author is correct. The finding survives only if the defense fails.
    - Only if no subagents are available, argue the other side yourself: is there a valid interpretation where the author is correct? Are you missing context? Could the specialist pass have been wrong?
+   - For `deep` reviews, add a second, independent adjudication round. Give a fresh agent the finding, defense, and any rebuttal, and ask it to recommend `keep`, `downgrade`, or `drop`. If subagents are unavailable, perform this adjudication yourself as a separate pass.
    Drop issues that do not survive scrutiny. Escalate issues that hold up under pressure.
 8. Produce the final review.
 9. Ask the user whether to save or update review memory. If they approve, write a concise update to the appropriate scope following `references/review_memory.md`.
@@ -22,7 +23,7 @@ Find errors in the artifact provided by the user: obvious errors and subtle ones
 
 - `quick`: at least 2 first-wave specialist passes and 1 critique round.
 - `standard`: at least 4 first-wave specialist passes and 1 critique round.
-- `deep`: at least 8 first-wave specialist passes and 2 critique rounds.
+- `deep`: at least 8 first-wave specialist passes, 1 defense/rebuttal round, and 1 independent adjudication round.
 
 These are first-wave floors, not caps; follow-up passes from step 5 come on top. If the user names a different budget or depth, respect it and keep the same process.
 
