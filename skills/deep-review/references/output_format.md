@@ -35,7 +35,7 @@ Questions that might resolve apparent problems.
 ## Finding Rules
 
 - Do not include praise unless it helps calibrate a concern.
-- Do not list a finding unless it survived self-critique.
+- Do not list a finding unless it survived the critique round.
 - Prefer exact citations over broad references.
 - If evidence is uncertain, say so.
 - If no critical issues were found, say that clearly and list residual review limits.

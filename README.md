@@ -6,7 +6,7 @@ It asks a short calibration interview, reads the artifact carefully, decomposes 
 
 The goal is simple: find the errors a generic chat-with-file pass is likely to miss.
 
-Deep Review can also maintain optional local review memory in `.deep-review/`, so future reviews can pick up the user's preferred standards, recurring concerns, and review taste. It only writes memory after explicit user approval.
+Deep Review can also maintain optional review memory — user-level taste in `~/.deep-review/` and project-level history in `.deep-review/` — so future reviews can pick up the user's preferred standards, recurring concerns, and review taste. It only writes memory after explicit user approval.
 
 ## What It Is Good For
 
