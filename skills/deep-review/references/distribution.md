@@ -4,19 +4,19 @@ This skill is packaged as a Claude Code plugin with Codex-style skill metadata.
 
 ## Claude Code
 
-Install Deep Review from the direct marketplace hosted in this repository:
-
-```text
-/plugin marketplace add dipakkrishnan/deep-review-skill
-/plugin install deep-review@deep-review-marketplace
-/reload-plugins
-```
-
-This is the recommended path while the community marketplace listing is propagating. Once Deep Review lands in `anthropics/claude-plugins-community`, users can also install it from there:
+Deep Review is live in Anthropic's Claude Community marketplace:
 
 ```text
 /plugin marketplace add anthropics/claude-plugins-community
 /plugin install deep-review@claude-community
+/reload-plugins
+```
+
+The direct marketplace hosted in this repository remains available as a fallback:
+
+```text
+/plugin marketplace add dipakkrishnan/deep-review-skill
+/plugin install deep-review@deep-review-marketplace
 /reload-plugins
 ```
 
