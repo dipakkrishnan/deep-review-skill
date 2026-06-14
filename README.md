@@ -19,7 +19,9 @@ Deep Review can also maintain optional review memory — user-level taste in `~/
 
 ## Status
 
-This is early. I am distributing it personally for now while I learn where it is most useful.
+Deep Review is now live in Anthropic's
+[Claude Community marketplace](https://github.com/anthropics/claude-plugins-community).
+It is still early, and I am learning where it is most useful.
 
 If you want to try it on a real paper or artifact, open an issue or reach out.
 
@@ -27,15 +29,21 @@ If you want to try it on a real paper or artifact, open an issue or reach out.
 
 ### Claude Code
 
-Add the direct Deep Review marketplace:
+Install Deep Review from the Claude Community marketplace:
+
+```text
+/plugin marketplace add anthropics/claude-plugins-community
+/plugin install deep-review@claude-community
+/reload-plugins
+```
+
+The repository-hosted marketplace is also available as a fallback:
 
 ```text
 /plugin marketplace add dipakkrishnan/deep-review-skill
 /plugin install deep-review@deep-review-marketplace
 /reload-plugins
 ```
-
-This is the fastest install path while the approved community marketplace listing propagates.
 
 Or copy the skill folder into a project directly:
 
