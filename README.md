@@ -23,7 +23,7 @@ Deep Review is now live in Anthropic's
 [Claude Community marketplace](https://github.com/anthropics/claude-plugins-community).
 It is still early, and I am learning where it is most useful.
 
-If you want to try it on a real paper or artifact, open an issue or reach out.
+If you want to try it on a real paper or artifact, install the skill in your coding agent.
 
 ## Install
 
